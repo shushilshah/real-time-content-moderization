@@ -1,0 +1,76 @@
+# =========================
+# Core API
+# =========================
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# =========================
+# ML / NLP
+# =========================
+torch
+transformers
+tokenizers
+scikit-learn
+numpy
+pandas
+
+# Optional (pretrained toxicity model)
+detoxify
+
+# =========================
+# Streaming (Kafka)
+# =========================
+kafka-python
+
+# =========================
+# Database (PostgreSQL)
+# =========================
+sqlalchemy
+psycopg2-binary
+alembic
+
+# =========================
+# Cache (Redis)
+# =========================
+redis
+
+# =========================
+# Dashboard (Streamlit)
+# =========================
+streamlit
+plotly
+
+# =========================
+# Utils
+# =========================
+loguru
+tqdm
+pyyaml
+orjson
+
+# =========================
+# Security
+# =========================
+passlib[bcrypt]
+python-jose
+
+# =========================
+# HTTP Clients
+# =========================
+httpx
+requests
+
+# =========================
+# Testing
+# =========================
+pytest
+pytest-asyncio
+
+# =========================
+# Dev Tools
+# =========================
+black
+isort
+flake8
