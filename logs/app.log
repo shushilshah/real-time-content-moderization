@@ -1,0 +1,237 @@
+2026-04-16 12:26:11.067 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 1.0ms
+2026-04-16 12:26:16.680 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 60.8ms
+2026-04-16 12:26:40.617 | INFO     | apps.api.routes.moderation:moderate:52 - Incoming request: I love you girl
+2026-04-16 12:26:42.655 | INFO     | apps.api.routes.moderation:moderate:67 - Cache miss -> running model
+2026-04-16 12:26:44.970 | INFO     | apps.api.routes.moderation:moderate:81 - Prediction -> score: 0.0008967876201495528, action: allowed
+2026-04-16 12:26:45.163 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4582.0ms
+2026-04-16 19:00:22.209 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 0.0ms
+2026-04-16 19:00:23.468 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 642.32ms
+2026-04-16 19:00:51.472 | INFO     | apps.api.routes.moderation:moderate:52 - Incoming request: we hate you, you are too bad at writing
+2026-04-16 19:00:53.511 | INFO     | apps.api.routes.moderation:moderate:67 - Cache miss -> running model
+2026-04-16 19:00:56.624 | INFO     | apps.api.routes.moderation:moderate:81 - Prediction -> score: 0.8432611227035522, action: blocked
+2026-04-16 19:00:56.869 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 5490.75ms
+2026-04-16 19:40:36.492 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 10.64ms
+2026-04-16 19:40:36.508 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 26.62ms
+2026-04-16 19:40:36.543 | INFO     | apps.api.routes.moderation:moderate:59 - Incoming request: we are going to india for visiting temples
+2026-04-16 19:40:38.978 | INFO     | apps.api.routes.moderation:moderate:75 - Message sent to Kafka
+2026-04-16 19:40:38.981 | INFO     | apps.api.routes.moderation:moderate:93 - Cache miss -> running model
+2026-04-16 19:40:45.522 | INFO     | apps.api.routes.moderation:moderate:107 - Prediction -> score: 0.0007125108386389911, action: allowed
+2026-04-16 19:40:46.059 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 9577.29ms
+2026-04-16 19:42:27.767 | INFO     | apps.api.routes.moderation:moderate:59 - Incoming request: why ai engineers to hard to hire as ai tools emerged too much
+2026-04-16 19:42:27.769 | INFO     | apps.api.routes.moderation:moderate:75 - Message sent to Kafka
+2026-04-16 19:42:27.773 | INFO     | apps.api.routes.moderation:moderate:93 - Cache miss -> running model
+2026-04-16 19:42:28.939 | INFO     | apps.api.routes.moderation:moderate:107 - Prediction -> score: 0.0010783195029944181, action: allowed
+2026-04-16 19:42:29.139 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 1434.45ms
+2026-04-16 20:04:40.932 | INFO     | __main__:main:56 - Kafka Consumer Started.....
+2026-04-16 20:04:52.009 | ERROR    | __main__:main:62 - Error Processing messsage: name 'msg' is not defined
+2026-04-16 20:04:52.025 | ERROR    | __main__:main:62 - Error Processing messsage: name 'msg' is not defined
+2026-04-16 20:07:26.206 | INFO     | __main__:main:56 - Kafka Consumer Started.....
+2026-04-16 20:09:22.043 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 8.8ms
+2026-04-16 20:09:22.994 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 278.49ms
+2026-04-16 20:10:14.872 | INFO     | apps.api.routes.moderation:moderate:59 - Incoming request: I love you my girl
+2026-04-16 20:10:16.960 | INFO     | apps.api.routes.moderation:moderate:75 - Message sent to Kafka
+2026-04-16 20:10:16.971 | INFO     | apps.api.routes.moderation:moderate:93 - Cache miss -> running model
+2026-04-16 20:10:17.116 | INFO     | __main__:process_message:30 - Proceessing message: I love you my girl
+2026-04-16 20:10:18.945 | INFO     | __main__:process_message:52 - Processed -> score: 0.001127932220697403, action: allowed
+2026-04-16 20:16:57.219 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 11.0ms
+2026-04-16 20:16:57.786 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 27.0ms
+2026-04-16 20:17:19.274 | INFO     | apps.api.routes.moderation:moderate:59 - Incoming request: I hate you roshan
+2026-04-16 20:17:21.348 | INFO     | apps.api.routes.moderation:moderate:75 - Message sent to Kafka
+2026-04-16 20:17:21.361 | INFO     | apps.api.routes.moderation:moderate:93 - Cache miss -> running model
+2026-04-16 20:17:21.378 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2182.32ms
+2026-04-16 20:17:21.578 | INFO     | __main__:process_message:30 - Proceessing message: I hate you roshan
+2026-04-16 20:17:22.442 | INFO     | __main__:process_message:52 - Processed -> score: 0.8273276090621948, action: review
+2026-04-17 10:09:59.641 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.14ms
+2026-04-17 10:10:00.647 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 523.34ms
+2026-04-17 10:11:33.039 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: the girl who is sitting there, i really like her
+2026-04-17 10:11:35.142 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:11:35.150 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:11:35.302 | INFO     | __main__:process_message:30 - Proceessing message: the girl who is sitting there, i really like her
+2026-04-17 10:11:38.176 | INFO     | __main__:process_message:52 - Processed -> score: 0.0008181320154108107, action: allowed
+2026-04-17 10:16:24.422 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 3.59ms
+2026-04-17 10:16:25.016 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 23.19ms
+2026-04-17 10:17:07.780 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: welcome to my brand new company which aim to provide jobs to new
+2026-04-17 10:17:09.873 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:17:09.889 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:17:09.923 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2240.34ms
+2026-04-17 10:17:09.925 | INFO     | __main__:process_message:30 - Proceessing message: welcome to my brand new company which aim to provide jobs to new
+2026-04-17 10:17:12.222 | INFO     | __main__:process_message:52 - Processed -> score: 0.0008636724087409675, action: allowed
+2026-04-17 10:20:17.778 | INFO     | __main__:main:58 - Kafka Consumer Started.....
+2026-04-17 10:20:32.211 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 11.08ms
+2026-04-17 10:20:32.745 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 49.3ms
+2026-04-17 10:21:13.159 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: She is trying to make me molessed through her eye contact from far distance
+2026-04-17 10:21:13.310 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:21:13.333 | ERROR    | __main__:main:64 - Error Processing messsage: name 'messaage' is not defined
+2026-04-17 10:21:13.340 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:21:13.362 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 243.23ms
+2026-04-17 10:23:03.844 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 0.0ms
+2026-04-17 10:23:04.230 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 23.17ms
+2026-04-17 10:24:56.130 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: what the hell are you doing there using my pen
+2026-04-17 10:24:58.458 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:24:58.489 | ERROR    | __main__:main:64 - Error Processing messsage: name 'messaage' is not defined
+2026-04-17 10:24:58.504 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:24:58.537 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2506.49ms
+2026-04-17 10:26:18.314 | INFO     | __main__:main:58 - Kafka Consumer Started.....
+2026-04-17 10:26:25.213 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 3.03ms
+2026-04-17 10:26:25.565 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 0.0ms
+2026-04-17 10:26:40.638 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: lets make love story
+2026-04-17 10:26:40.687 | INFO     | __main__:process_message:31 - Proceessing message: lets make love story
+2026-04-17 10:26:40.678 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:26:40.733 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:26:40.769 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 168.62ms
+2026-04-17 10:26:42.116 | ERROR    | __main__:main:64 - Error Processing messsage: create_log() got an unexpected keyword argument 'request_id'
+2026-04-17 10:34:45.485 | INFO     | __main__:main:58 - Kafka Consumer Started.....
+2026-04-17 10:34:56.848 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.02ms
+2026-04-17 10:34:57.693 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 348.03ms
+2026-04-17 10:35:16.771 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: we are playing a lovable game
+2026-04-17 10:35:18.861 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:35:18.867 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:35:18.879 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2182.15ms
+2026-04-17 10:35:18.875 | INFO     | __main__:process_message:31 - Proceessing message: we are playing a lovable game
+2026-04-17 10:35:20.459 | ERROR    | __main__:main:64 - Error Processing messsage: create_log() got an unexpected keyword argument 'request_id'
+2026-04-17 10:37:04.151 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 0.0ms
+2026-04-17 10:37:04.837 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 2.02ms
+2026-04-17 10:37:20.033 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: i love you very much
+2026-04-17 10:37:20.053 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:37:20.063 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:37:20.076 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 68.97ms
+2026-04-17 10:37:20.089 | INFO     | __main__:process_message:31 - Proceessing message: i love you very much
+2026-04-17 10:37:21.123 | ERROR    | __main__:main:64 - Error Processing messsage: create_log() got an unexpected keyword argument 'request_id'
+2026-04-17 10:39:34.562 | INFO     | __main__:main:58 - Kafka Consumer Started.....
+2026-04-17 10:40:34.183 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.01ms
+2026-04-17 10:40:34.606 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 180.98ms
+2026-04-17 10:40:44.881 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: we love you
+2026-04-17 10:40:47.373 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 10:40:47.423 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 10:40:47.465 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2832.88ms
+2026-04-17 10:40:47.469 | INFO     | __main__:process_message:31 - Proceessing message: we love you
+2026-04-17 10:40:52.520 | INFO     | __main__:process_message:54 - Processed -> score: 0.0009006818290799856, action: allowed
+2026-04-17 12:56:36.483 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: I love my life
+2026-04-17 12:56:36.565 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 12:56:36.613 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 12:56:36.653 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 174.43ms
+2026-04-17 12:56:38.411 | INFO     | __main__:process_message:31 - Proceessing message: I love my life
+2026-04-17 12:56:41.927 | INFO     | __main__:process_message:54 - Processed -> score: 0.0018587965751066804, action: allowed
+2026-04-17 12:57:42.951 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: I hate you because i love her
+2026-04-17 12:57:43.337 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 12:57:43.753 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 12:57:44.194 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 1248.52ms
+2026-04-17 12:57:45.126 | INFO     | __main__:process_message:31 - Proceessing message: I hate you because i love her
+2026-04-17 12:57:56.599 | INFO     | __main__:process_message:54 - Processed -> score: 0.4559292793273926, action: allowed
+2026-04-17 13:04:34.274 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 17.56ms
+2026-04-17 13:04:34.876 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 1.0ms
+2026-04-17 13:07:21.292 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: I will lut you
+2026-04-17 13:07:21.294 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: I don't know why all people hates me.
+2026-04-17 13:07:23.386 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 13:07:23.386 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 13:07:23.393 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 13:07:23.395 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 13:07:23.406 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2178.85ms
+2026-04-17 13:07:23.421 | INFO     | __main__:process_message:31 - Proceessing message: I will lut you
+2026-04-17 13:07:23.427 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2199.51ms
+2026-04-17 13:07:28.193 | INFO     | __main__:process_message:54 - Processed -> score: 0.5673269629478455, action: allowed
+2026-04-17 13:07:28.210 | INFO     | __main__:process_message:31 - Proceessing message: I don't know why all people hates me.
+2026-04-17 13:07:30.129 | INFO     | __main__:process_message:54 - Processed -> score: 0.09725203365087509, action: allowed
+2026-04-17 13:12:18.439 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate/{de1ae75a-b5a1-42f6-979a-371c799faf32} Status: 404 Time: 0.0ms
+2026-04-17 13:12:54.581 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: you are too sexy 
+2026-04-17 13:12:54.585 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 13:12:54.647 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 13:12:54.661 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 93.04ms
+2026-04-17 13:12:54.804 | INFO     | __main__:process_message:31 - Proceessing message: you are too sexy 
+2026-04-17 13:12:55.815 | INFO     | __main__:process_message:54 - Processed -> score: 0.7152605056762695, action: review
+2026-04-17 13:13:18.598 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate/{d0147882-ff96-4b67-8175-bacc6051fed0} Status: 404 Time: 2.02ms
+2026-04-17 13:13:44.090 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /result/{d0147882-ff96-4b67-8175-bacc6051fed0} Status: 200 Time: 117.05ms
+2026-04-17 13:16:45.737 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /result/d0147882-ff96-4b67-8175-bacc6051fed0 Status: 200 Time: 12.22ms
+2026-04-17 13:45:27.417 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 0.0ms
+2026-04-17 13:45:28.126 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 303.11ms
+2026-04-17 13:47:00.648 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: how are you, we must meet tonight
+2026-04-17 13:47:02.703 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 13:47:02.708 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 13:47:02.713 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2113.76ms
+2026-04-17 13:47:03.195 | INFO     | __main__:process_message:31 - Proceessing message: how are you, we must meet tonight
+2026-04-17 13:47:04.568 | INFO     | __main__:process_message:54 - Processed -> score: 0.0010474184527993202, action: allowed
+2026-04-17 13:54:57.941 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /ws/38b083ca-3aad-4116-8c29-2e05c79bc183 Status: 404 Time: 27.22ms
+2026-04-17 13:55:33.744 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /ws/38b083ca-3aad-4116-8c29-2e05c79bc183 Status: 404 Time: 1.0ms
+2026-04-17 13:55:50.211 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: how are you, we must meet today
+2026-04-17 13:55:50.275 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 13:55:50.291 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 13:55:50.293 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 96.55ms
+2026-04-17 13:55:50.317 | INFO     | __main__:process_message:31 - Proceessing message: how are you, we must meet today
+2026-04-17 13:55:51.023 | INFO     | __main__:process_message:54 - Processed -> score: 0.00091780093498528, action: allowed
+2026-04-17 13:56:17.798 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /ws/20737c9d-149b-411a-ba84-d0892c61cbf6 Status: 404 Time: 0.0ms
+2026-04-17 13:59:50.396 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /ws/20737c9d-149b-411a-ba84-d0892c61cbf6 Status: 404 Time: 1.0ms
+2026-04-17 14:01:48.938 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 1.0ms
+2026-04-17 14:01:49.716 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 264.73ms
+2026-04-17 14:02:12.006 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: love you
+2026-04-17 14:02:14.072 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 14:02:14.131 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 14:02:14.137 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2194.75ms
+2026-04-17 14:02:14.221 | INFO     | __main__:process_message:31 - Proceessing message: love you
+2026-04-17 14:02:15.405 | INFO     | __main__:process_message:54 - Processed -> score: 0.0010930112330242991, action: allowed
+2026-04-17 14:15:05.574 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 3.0ms
+2026-04-17 14:15:05.575 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 3.0ms
+2026-04-17 14:15:06.224 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 252.58ms
+2026-04-17 14:15:18.504 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: I hate her
+2026-04-17 14:15:20.585 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 14:15:20.585 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 14:15:20.593 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2157.3ms
+2026-04-17 14:15:20.979 | INFO     | __main__:process_message:31 - Proceessing message: I hate her
+2026-04-17 14:15:21.446 | INFO     | __main__:process_message:54 - Processed -> score: 0.9089769124984741, action: blocked
+2026-04-17 14:17:20.130 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 17.33ms
+2026-04-17 14:17:20.565 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 199.79ms
+2026-04-17 14:17:31.541 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: love
+2026-04-17 14:17:33.578 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-17 14:17:33.581 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-17 14:17:33.583 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2124.39ms
+2026-04-17 14:17:33.661 | INFO     | __main__:process_message:31 - Proceessing message: love
+2026-04-17 14:17:34.354 | INFO     | __main__:process_message:54 - Processed -> score: 0.0011032021138817072, action: allowed
+2026-04-17 14:18:36.759 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /moderate Status: 405 Time: 7.37ms
+2026-04-17 14:18:37.025 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /favicon.ico Status: 404 Time: 2.0ms
+2026-04-17 14:18:42.008 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 2.01ms
+2026-04-18 14:32:50.113 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 18.99ms
+2026-04-18 14:32:50.482 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 2.02ms
+2026-04-18 14:33:57.810 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: We were in love from last 5 years but yesterday we got broken of relationship because she cheated me by making partner with other boy
+2026-04-18 14:33:57.845 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-18 14:33:57.851 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-18 14:33:57.859 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 115.86ms
+2026-04-18 14:33:58.261 | INFO     | __main__:process_message:31 - Proceessing message: We were in love from last 5 years but yesterday we got broken of relationship because she cheated me by making partner with other boy
+2026-04-18 14:34:00.776 | INFO     | __main__:process_message:54 - Processed -> score: 0.001276378519833088, action: allowed
+2026-04-18 14:40:54.446 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.02ms
+2026-04-18 14:40:56.318 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 145.73ms
+2026-04-18 14:41:14.794 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: what the hell are you doing
+2026-04-18 14:41:17.958 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-18 14:41:18.408 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-18 14:41:18.564 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4006.27ms
+2026-04-18 14:41:19.759 | INFO     | __main__:process_message:31 - Proceessing message: what the hell are you doing
+2026-04-18 14:41:22.794 | INFO     | __main__:process_message:54 - Processed -> score: 0.9244670271873474, action: blocked
+2026-04-18 14:42:03.604 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 0.0ms
+2026-04-18 14:42:05.405 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 0.0ms
+2026-04-18 14:42:05.900 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 0.0ms
+2026-04-18 14:42:06.139 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 2.02ms
+2026-04-18 14:43:34.040 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 35.25ms
+2026-04-18 14:49:01.157 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 81.95ms
+2026-04-18 14:49:52.280 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.01ms
+2026-04-18 14:49:54.628 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 1933.25ms
+2026-04-18 14:50:07.426 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: i love me
+2026-04-18 14:50:09.508 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-18 14:50:09.521 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-18 14:50:09.529 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2180.92ms
+2026-04-18 14:50:09.546 | INFO     | __main__:process_message:31 - Proceessing message: i love me
+2026-04-18 14:50:10.527 | INFO     | __main__:process_message:54 - Processed -> score: 0.001311448635533452, action: allowed
+2026-04-18 14:50:26.123 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 6.66ms
+2026-04-18 14:52:31.643 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 11.51ms
+2026-04-18 14:58:10.252 | INFO     | __main__:main:76 - Kafka Consumer Started.....
+2026-04-18 14:59:55.786 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 0.0ms
+2026-04-18 14:59:56.818 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 557.57ms
+2026-04-18 15:00:11.217 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: he loves me
+2026-04-18 15:00:13.246 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-18 15:00:13.255 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-18 15:00:13.282 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2122.2ms
+2026-04-18 15:00:13.667 | INFO     | __main__:process_message:32 - Proceessing message: he loves me
+2026-04-18 15:00:15.965 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 4.03ms
+2026-04-18 15:00:15.983 | INFO     | __main__:process_message:71 - Processed -> score: 0.0039244056679308414, action: allowed
+2026-04-18 15:00:15.988 | INFO     | __main__:process_message:72 - Consumer ID -> 63d3e29a-0ee8-4d47-bfee-7899e065bff7
+2026-04-18 15:00:42.538 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 159.06ms
+2026-04-18 15:00:53.987 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 2.75ms
+2026-04-18 15:01:03.136 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 4.29ms
+2026-04-18 15:01:11.234 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 6.19ms
