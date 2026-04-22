@@ -235,3 +235,27 @@
 2026-04-18 15:00:53.987 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 2.75ms
 2026-04-18 15:01:03.136 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /internal/result Status: 405 Time: 4.29ms
 2026-04-18 15:01:11.234 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 6.19ms
+2026-04-18 15:44:17.373 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.01ms
+2026-04-18 15:44:18.704 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 699.62ms
+2026-04-18 15:47:41.097 | INFO     | __main__:main:76 - Kafka Consumer Started.....
+2026-04-18 15:50:25.740 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 1.0ms
+2026-04-18 15:50:26.493 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 256.55ms
+2026-04-18 15:50:42.895 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: you are sexy girl
+2026-04-18 15:50:44.965 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-18 15:50:44.971 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-18 15:50:44.978 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2132.87ms
+2026-04-18 15:50:45.534 | INFO     | __main__:process_message:32 - Proceessing message: you are sexy girl
+2026-04-18 15:50:49.451 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 13.11ms
+2026-04-18 15:50:49.466 | INFO     | __main__:process_message:71 - Processed -> score: 0.6767193675041199, action: review
+2026-04-18 15:50:49.469 | INFO     | __main__:process_message:72 - Consumer ID -> 03f4d302-ddd9-4c33-b03f-ce0eb1a2ea75
+2026-04-18 16:10:01.157 | INFO     | __main__:main:76 - Kafka Consumer Started.....
+2026-04-18 16:20:26.254 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 1.02ms
+2026-04-18 16:20:27.408 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 359.67ms
+2026-04-18 16:20:54.195 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: i am writing love letter to my love
+2026-04-18 16:20:56.239 | INFO     | apps.api.routes.moderation:moderate:77 - Message sent to Kafka
+2026-04-18 16:20:56.243 | INFO     | apps.api.routes.moderation:moderate:95 - Cache miss -> running model
+2026-04-18 16:20:56.252 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 2106.45ms
+2026-04-18 16:20:57.073 | INFO     | __main__:process_message:32 - Proceessing message: i am writing love letter to my love
+2026-04-18 16:21:00.676 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 17.15ms
+2026-04-18 16:21:00.680 | INFO     | __main__:process_message:71 - Processed -> score: 0.0009869890054687858, action: allowed
+2026-04-18 16:21:00.684 | INFO     | __main__:process_message:72 - Consumer ID -> e9526f09-5e1d-4226-a487-c767fbaec1ac

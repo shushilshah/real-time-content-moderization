@@ -1,0 +1,1 @@
+MODERATION_TOPIC = "moderation_requests"

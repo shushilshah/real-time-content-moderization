@@ -8,7 +8,15 @@ from database.db import SessionLocal
 from database.crud.moderation_log import create_log
 from cache.redis_client import redis_client
 from cache.rate_limiter import is_rate_limited
+from core.logger import logger
+from streaming.kafka_config import get_producer
+from streaming.topics import MODERATION_TOPIC
+import uuid
 
+producer = None
+
+if producer is None:
+    producer = get_producer()
 
 router = APIRouter()
 
@@ -48,47 +56,82 @@ def decide_action(score: float) -> str:
 @router.post("/moderate", response_model=ModerationResponse)
 def moderate(request: ModerationRequest, db: Session = Depends(get_db)):
     user_id = "default_user"
+    request_id = str(uuid.uuid4())
+    logger.info(f"Incoming request: {request.text}")
 
     # rate limiting
     if is_rate_limited(user_id):
         raise HTTPException(status_code=429, detail="Too many requests")
 
+    # send to kafka
+    message = {
+        "request_id": request_id,
+        "user_id": user_id,
+        "text": request.text
+    }
+
+    # producer.send(MODERATION_TOPIC, message)
+    if producer:
+        try:
+            producer.send(MODERATION_TOPIC, message)
+            logger.info("Message sent to Kafka")
+        except Exception as e:
+            logger.error(f"Kafka send failed: {e}")
+    
+    else:
+        logger.warning("Kafka not available, skipping send")
+        logger.info("Message sent to kafka")
+
+    # temp fallback
     # cache key
     cache_key = f"moderation:{request.text}"
 
     cached = redis_client.get(cache_key)
     if cached:
+        logger.info("Cache hit")
         import json
         return json.loads(cached)
+    
+    logger.info("Cache miss -> running model")
 
     # model intference
-    result = predictor.predict(request.text)
+    # result = predictor.predict(request.text)
 
-    score = result["score"]
+    # score = result["score"]
 
 
-    if score > 0.6:
-        label="toxic"
-    else:
-        label="clean"
+    # if score > 0.6:
+    #     label="toxic"
+    # else:
+    #     label="clean"
 
-    action = decide_action(score)
+    # action = decide_action(score)
+    # logger.info(f"Prediction -> score: {score}, action: {action}")
 
 
     # save to database
-    create_log(
-        db=db,
-        text=request.text,
-        toxicity=score,
-        label=label,
-        action=action
-    )
+    # create_log(
+    #     db=db,
+    #     text=request.text,
+    #     toxicity=score,
+    #     label=label,
+    #     action=action
+    # )
 
-    return ModerationResponse(
-        toxicity=score,
-        label=label,
-        action=action
-    )
+    # return ModerationResponse(
+    #     toxicity=score,
+    #     label=label,
+    #     action=action
+    # )
+    return {
+        "toxicity": 0.0,
+        "label": "processing",
+        "action": "queued"
+    }
+    # return {
+    #     "request_id": request_id,
+    #     "status": "processing"
+    # }
 
 
     # cache result

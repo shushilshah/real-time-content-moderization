@@ -10,7 +10,8 @@ import requests
 #create kafka consumer
 consumer= KafkaConsumer(
     MODERATION_TOPIC,
-    bootstrap_servers="localhost:9092",
+    # bootstrap_servers="localhost:9092",
+    bootstrap_servers=os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092"),
     auto_offset_reset="earliest",
     enable_auto_commit=True,
     group_id="moderation-group",
