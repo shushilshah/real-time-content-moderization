@@ -1,22 +1,16 @@
-from kafka import KafkaConsumer
+import redis
 import json
-from streaming.topics import MODERATION_TOPIC
 from models.inference.predictor import predictor
 from database.db import SessionLocal
 from database.crud.moderation_log import create_log
 from core.logger import logger
 import requests
 
-#create kafka consumer
-consumer= KafkaConsumer(
-    MODERATION_TOPIC,
-    # bootstrap_servers="localhost:9092",
-    bootstrap_servers=os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092"),
-    auto_offset_reset="earliest",
-    enable_auto_commit=True,
-    group_id="moderation-group",
-    value_deserializer=lambda x: json.loads(x.decode('utf-8')),
-)
+# 🔁 Create Redis client
+r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+
+QUEUE_NAME = "moderation_queue"
+
 
 def decide_action(score: float) -> str:
     if score > 0.85:
@@ -26,20 +20,21 @@ def decide_action(score: float) -> str:
     else:
         return "allowed"
 
+
 def process_message(message):
     request_id = message['request_id']
     text = message['text']
 
-    logger.info(f"Proceessing message: {text}")
+    logger.info(f"Processing message: {text}")
 
-    # ML prediction
+    # 🤖 ML prediction
     result = predictor.predict(text)
     score = result['score']
 
     label = "toxic" if score > 0.6 else "clean"
     action = decide_action(score)
 
-    # save to database
+    # 💾 Save to database
     db = SessionLocal()
     try:
         create_log(
@@ -53,7 +48,7 @@ def process_message(message):
     finally:
         db.close()
 
-
+    # 🔔 Notify API
     try:
         requests.post(
             "http://127.0.0.1:8000/internal/result",
@@ -68,19 +63,26 @@ def process_message(message):
     except Exception as e:
         logger.error(f"Failed to notify API: {e}")
 
-
     logger.info(f"Processed -> score: {score}, action: {action}")
     logger.info(f"Consumer ID -> {request_id}")
 
 
 def main():
-    logger.info("Kafka Consumer Started.....")
+    logger.info("Redis Consumer Started.....")
 
-    for msg in consumer:
+    while True:
         try:
-            process_message(msg.value)
+            # ⏳ Blocking wait for message
+            _, message = r.brpop(QUEUE_NAME)
+
+            # Convert JSON string → dict
+            data = json.loads(message)
+
+            process_message(data)
+
         except Exception as e:
-            logger.error(f"Error Processing messsage: {e}")
+            logger.error(f"Error processing message: {e}")
+
 
 if __name__ == "__main__":
     main()

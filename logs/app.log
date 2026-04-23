@@ -259,3 +259,62 @@
 2026-04-18 16:21:00.676 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 17.15ms
 2026-04-18 16:21:00.680 | INFO     | __main__:process_message:71 - Processed -> score: 0.0009869890054687858, action: allowed
 2026-04-18 16:21:00.684 | INFO     | __main__:process_message:72 - Consumer ID -> e9526f09-5e1d-4226-a487-c767fbaec1ac
+2026-04-23 12:35:12.358 | INFO     | __main__:main:71 - Redis Consumer Started.....
+2026-04-23 12:42:54.046 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.01ms
+2026-04-23 12:42:55.059 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 296.7ms
+2026-04-23 12:43:18.342 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: are you going to pokhara or not?
+2026-04-23 12:44:43.899 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 2.02ms
+2026-04-23 12:44:44.767 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 321.75ms
+2026-04-23 12:45:05.202 | INFO     | apps.api.routes.moderation:moderate:60 - Incoming request: love you
+2026-04-23 12:46:13.747 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 14.53ms
+2026-04-23 12:46:14.611 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 361.03ms
+2026-04-23 12:46:27.058 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: love you yrr
+2026-04-23 12:46:29.150 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 12:46:31.179 | INFO     | __main__:process_message:28 - Processing message: love you yrr
+2026-04-23 12:46:31.181 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4389.13ms
+2026-04-23 12:46:35.325 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 6.04ms
+2026-04-23 12:46:35.328 | INFO     | __main__:process_message:66 - Processed -> score: 0.001483124797232449, action: allowed
+2026-04-23 12:46:35.328 | INFO     | __main__:process_message:67 - Consumer ID -> 4a9814c6-e930-4561-b5fe-c851337f901a
+2026-04-23 12:53:35.586 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: I love you my dear wife
+2026-04-23 12:53:37.690 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 12:53:39.721 | INFO     | __main__:process_message:28 - Processing message: I love you my dear wife
+2026-04-23 12:53:39.723 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4175.84ms
+2026-04-23 12:53:40.390 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 29.02ms
+2026-04-23 12:53:40.395 | INFO     | __main__:process_message:66 - Processed -> score: 0.0008069167379289865, action: allowed
+2026-04-23 12:53:40.399 | INFO     | __main__:process_message:67 - Consumer ID -> a10ac5fc-1c5b-40ce-a5c2-fe4142344e42
+2026-04-23 12:56:06.766 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: love me or not
+2026-04-23 12:56:08.818 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 12:56:10.864 | INFO     | __main__:process_message:28 - Processing message: love me or not
+2026-04-23 12:56:13.093 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 32.73ms
+2026-04-23 12:56:13.108 | INFO     | __main__:process_message:66 - Processed -> score: 0.007877228781580925, action: allowed
+2026-04-23 12:56:13.116 | INFO     | __main__:process_message:67 - Consumer ID -> c8db8449-7f73-41d8-8aea-705989041fd6
+2026-04-23 12:57:50.603 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: string
+2026-04-23 12:57:50.685 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 12:57:50.703 | INFO     | __main__:process_message:28 - Processing message: string
+2026-04-23 12:57:51.185 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 4.02ms
+2026-04-23 12:57:51.187 | INFO     | __main__:process_message:66 - Processed -> score: 0.011951466090977192, action: allowed
+2026-04-23 12:57:51.187 | INFO     | __main__:process_message:67 - Consumer ID -> bf9859d7-e48e-4890-9abe-010c3d42977b
+2026-04-23 13:01:00.687 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /docs Status: 200 Time: 7.78ms
+2026-04-23 13:01:01.321 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /openapi.json Status: 200 Time: 321.66ms
+2026-04-23 13:01:22.924 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: love
+2026-04-23 13:01:25.003 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 13:01:27.023 | INFO     | __main__:process_message:28 - Processing message: love
+2026-04-23 13:01:27.025 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4168.63ms
+2026-04-23 13:01:27.718 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 4.03ms
+2026-04-23 13:01:27.720 | INFO     | __main__:process_message:66 - Processed -> score: 0.0011032021138817072, action: allowed
+2026-04-23 13:01:27.722 | INFO     | __main__:process_message:67 - Consumer ID -> a0748d7e-bd6e-4b6f-8363-e38ea6a4c359
+2026-04-23 13:01:41.936 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: love me
+2026-04-23 13:01:41.951 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 13:01:41.986 | INFO     | __main__:process_message:28 - Processing message: love me
+2026-04-23 13:01:41.988 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 68.16ms
+2026-04-23 13:01:42.489 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 5.0ms
+2026-04-23 13:01:42.493 | INFO     | __main__:process_message:66 - Processed -> score: 0.005793189629912376, action: allowed
+2026-04-23 13:01:42.493 | INFO     | __main__:process_message:67 - Consumer ID -> ebb3d5ec-5e24-488d-a268-7b10d30c59e5
+2026-04-23 13:04:12.459 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: Jay ram
+2026-04-23 13:04:14.509 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 13:04:16.543 | INFO     | __main__:process_message:28 - Processing message: Jay ram
+2026-04-23 13:04:16.581 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4146.54ms
+2026-04-23 13:04:17.152 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 6.09ms
+2026-04-23 13:04:17.156 | INFO     | __main__:process_message:66 - Processed -> score: 0.0017293813871219754, action: allowed
+2026-04-23 13:04:17.162 | INFO     | __main__:process_message:67 - Consumer ID -> a3e22315-2e45-4294-b518-f1e7325c1a65
+2026-04-23 13:04:18.683 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /result/None Status: 200 Time: 90.4ms
