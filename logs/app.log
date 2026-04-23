@@ -318,3 +318,18 @@
 2026-04-23 13:04:17.156 | INFO     | __main__:process_message:66 - Processed -> score: 0.0017293813871219754, action: allowed
 2026-04-23 13:04:17.162 | INFO     | __main__:process_message:67 - Consumer ID -> a3e22315-2e45-4294-b518-f1e7325c1a65
 2026-04-23 13:04:18.683 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /result/None Status: 200 Time: 90.4ms
+2026-04-23 13:11:40.202 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: i love you
+2026-04-23 13:11:42.265 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 13:11:44.319 | INFO     | __main__:process_message:28 - Processing message: i love you
+2026-04-23 13:11:44.321 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 4138.28ms
+2026-04-23 13:11:44.848 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 4.0ms
+2026-04-23 13:11:44.856 | INFO     | __main__:process_message:66 - Processed -> score: 0.0009022763697430491, action: allowed
+2026-04-23 13:11:44.857 | INFO     | __main__:process_message:67 - Consumer ID -> e63e9bcb-2114-4905-ac5b-c47831af46c9
+2026-04-23 13:11:46.347 | INFO     | apps.api.middleware.logging:dispatch:13 - GET /result/e63e9bcb-2114-4905-ac5b-c47831af46c9 Status: 200 Time: 15.23ms
+2026-04-23 13:12:09.199 | INFO     | apps.api.routes.moderation:moderate:30 - Incoming request: fuck this guy
+2026-04-23 13:12:09.213 | INFO     | apps.api.routes.moderation:moderate:44 - Cache miss -> sending to queue
+2026-04-23 13:12:09.217 | INFO     | __main__:process_message:28 - Processing message: fuck this guy
+2026-04-23 13:12:09.227 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /moderate Status: 200 Time: 82.23ms
+2026-04-23 13:12:10.619 | INFO     | apps.api.middleware.logging:dispatch:13 - POST /internal/result Status: 200 Time: 27.42ms
+2026-04-23 13:12:10.683 | INFO     | __main__:process_message:66 - Processed -> score: 0.9956217408180237, action: blocked
+2026-04-23 13:12:10.687 | INFO     | __main__:process_message:67 - Consumer ID -> 57be42ca-6bfe-45d4-bfd6-57ceba1606be

@@ -29,11 +29,11 @@ def moderate(request: ModerationRequest, db: Session = Depends(get_db)):
 
     logger.info(f"Incoming request: {request.text}")
 
-    # 🚫 Rate limiting
+    # Rate limiting
     if is_rate_limited(user_id):
         raise HTTPException(status_code=429, detail="Too many requests")
 
-    # 📦 Cache check
+    # Cache check
     cache_key = f"moderation:{request.text}"
     cached = redis_client.get(cache_key)
 
@@ -43,13 +43,13 @@ def moderate(request: ModerationRequest, db: Session = Depends(get_db)):
 
     logger.info("Cache miss -> sending to queue")
 
-    # 🚀 Send to Redis queue
+    # Send to Redis queue
     send_to_queue({
         "request_id": request_id,
         "text": request.text
     })
 
-    # ⏳ Immediate response (async processing)
+    # Immediate response (async processing)
     response = {
         "toxicity": 0.0,
         "label": "processing",
